@@ -1,0 +1,421 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-family: "PT Serif", serif;
+}
+
+/* Home page style */
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@300&display=swap");
+#home {
+  background-image: url('./assests/bg-books-img.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+#home section {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  height: 80%;
+  width: 35%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+#home h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #f8f8f8;
+  font-weight: 400;
+  padding-bottom: 50px;
+
+}
+#home .play-button-container {
+  width: 100%;
+}
+#home a.play-button {
+  background-color: #57b846;
+  color: #fff;
+  display: block;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s linear all;
+  text-decoration: solid;
+}
+#home a.play-button:hover {
+  background-color: #158915;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+}
+#home #login-btn:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  background-color: #b02d2d;
+}
+#home #sign-btn:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  background-color: #1d54c3;
+}
+#home .auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+#home #login-btn {
+  transition: 0.3s linear all;
+  background-color: #ea4355;
+}
+#home #sign-btn {
+  background-color: rgb(96, 96, 248);
+  transition: 0.3s linear all;
+}
+#home .auth-button {
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 1rem 0;
+  text-align: center;
+  width: 45%;
+  text-decoration: solid;
+}
+
+@media (max-width: 768px) {
+  #home section {
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* MarqueeText.css */
+.marquee-container {
+  width: 100%; 
+  overflow: hidden;
+}
+
+.marquee-text {
+  font-size: 2.5rem; 
+  color:rgb(163, 206, 244);
+  white-space: nowrap;
+  padding-top:50px ;
+  font-weight: bold;
+  animation: marquee 15s linear infinite; 
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+/* Quiz Instruction (icon) */
+
+.instruction{
+  /* border: 3px solid #f1e6e6; */
+  padding-left: 100px;
+  margin-right: 90px;
+  line-height: 1.6;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.quiz-h1{
+  color:#333;
+  text-align: center;
+}
+.footer-button{
+  background: linear-gradient(90deg, #1d54c3 50%, #47a9e6 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: solid;
+}
+.footer-button:hover{
+  color:white;
+  /* font-weight: bold; */
+  font-family:Berlin Sans FB;
+  background-color: #1d54c3;
+  background-position: left bottom;
+}
+.quiz-ins-image{
+  /* width: 550px;
+  height: 260px; */
+  width: 80%;
+  height: 50%;
+  padding-left: 45px;
+}
+
+
+.lifeline-icon{
+  position: relative;
+  cursor:pointer;
+  top:-3px;
+  font-size: 20px;
+  color:#57b846;
+}
+
+.lifeline-icon:hover{
+  color: #ea4355;
+  font-size:22px;
+}
+
+.browser-default{
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-link{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media(max-width: 2rem){
+  .instruction img{
+    width: 100% !important;
+    height: 150% !important;
+  }
+}
+
+
+/* play styling */
+.question{
+  background: #f8f8f8;
+  border-left: 5px solid  #1da1f2;
+  width:80%;
+  margin: 3rem auto 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+h2{
+  text-align: center;
+  font-weight: bold;
+}
+
+.lifeline-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lifeline{
+  position: relative;
+  top:-3px;
+}
+
+h3{
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.options-container{
+  display: inline-block;
+  width: 50%;
+}
+
+.option{
+  background-color:#1da1f2;
+  border-radius:30px;
+  color:#ffff;
+  cursor: pointer;
+  margin: 2rem auto;
+  padding: 1rem;
+  transition: 0.3s linear all;
+  text-align: center;
+  width: 90%;
+}
+
+.option:hover{
+  background-color: #1d54c3;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto 1.5rem;
+    padding: 2rem;
+    width: 80%;
+}
+
+.button-container button{
+  border: none;
+  color:#fff;
+  cursor: pointer;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-right: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.button-container button:first-child{
+  background-color: #1d54c3;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  transition: 0.2s linear all;
+}
+
+.button-container button:first-child:hover{
+  background-color:#47a9e6;
+}
+
+.button-container button:nth-child(2){
+  background-color: #158915;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  transition: 0.2s linear all;
+}
+
+.button-container button:nth-child(2):hover{
+  background-color:#57b846;
+}
+
+.button-container button:last-child{
+  background-color: #b02d2d;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  transition: 0.2s linear all;
+}
+
+.button-container button:last-child:hover{
+  background-color:#ea4355;
+}
+
+.disable{
+  background-color: #ccc;
+  box-shadow: none;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container button {
+    margin: 10px 0;
+  }
+}
+
+
+/* Answer-options-click */
+.toast-valid{
+  background-color: #36e218 !important;
+  border-radius: 5px !important;
+  color: #f1e6e6;
+  padding: 13px;
+  margin-right: 1070px;
+  padding-left: 80px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  border-radius: 50px;
+}
+
+.toast-invalid{
+  background-color: rgb(255, 47, 47) !important;
+  border-radius: 5px !important;
+  color: #f1e6e6;
+  padding: 13px;
+  padding: 13px;
+  margin-right: 1070px;
+  padding-left: 80px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.024), 0 1px 5px 0 rgba(0, 0, 0, 0.189);
+  border-radius: 50px;
+}
+
+/* quiz summery */
+.tickIcon{
+  color:#57b846;
+  text-align: center;
+  margin-left: 510px;
+}
+
+/* styles.css */
+.summary-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary-header .tickIcon {
+  font-size: 70px;
+  margin-top: 190px;
+  margin-right: 110px;
+}
+
+.container {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remark {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.stats .stat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.actions ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.actions ul li {
+  margin: 0 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .stats .stat {
+    font-size: 14px;
+  } 
+}
+.summery-button {
+  background: linear-gradient(90deg, #5389f7 50%, #92d5ff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s;
+  color: #333;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: solid;
+}
+.summery-button:hover{
+  color:white;
+  background-color: #1d54c3;
+  background-position: left bottom;
+  font-family:Berlin Sans FB;
+  text-decoration: solid;
+}
