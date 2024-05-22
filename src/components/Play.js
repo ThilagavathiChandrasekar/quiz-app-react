@@ -6,6 +6,7 @@ import questions from '../questions.json';
 import isEmpty from '../utils/is-empty';
 import classnames from 'classnames';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Play.css';
 
 //icons
 import { FaClock, FaGratipay } from "react-icons/fa";
@@ -312,9 +313,6 @@ endGame = () => {
     document.write("<p style='margin: 25px; text-align:center; color:#1d54c3;'>Wrong Answer: " + playerStats.wrongAnswers + "</p>");
     document.write("<p style='margin: 25px; text-align:center; color:#1d54c3;'>FiftyFifty Used: " + playerStats.fiftyFiftyUsed + "</p>");
     document.write("<p style='margin: 25px; text-align:center; color:#1d54c3;'>Hints used: " + playerStats.hintsUsed + "</p>");
-
-    document.write("<button style='margin-left:400px; background: linear-gradient(90deg, #1d54c3 50%, #47a9e6 50%); background-size: 200% 100%; background-position: right bottom;transition: background-position 0.5s; color: #333; font-size: 16px; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;text-decoration: solid;' onclick={playAgain}>Play again</button>");
-    document.write("<button style='margin-left:900px; padding-top:200px; background: linear-gradient(90deg, #1d54c3 50%, #47a9e6 50%); background-size: 200% 100%; background-position: right bottom;transition: background-position 0.5s; color: #333; font-size: 16px; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;text-decoration: solid;' onclick={home}>Back to home</button>");
    
     this.props.navigate('/play/quizSummery', playerStats)
     // window.location.href = '/play/quizSummery';
@@ -356,7 +354,7 @@ handleDisableButton = () =>{
         <Fragment>
             <Helmet> <title>Question's </title></Helmet>
         <div className="question">
-        <h2>Quiz Mode</h2>
+        <h2 className='quizmode'>Quiz Mode</h2>
             <div className="lifeline-container">
                    <p> <span onClick={this.handleFiftyFifty} className='lifeline-icon'><FaGratipay />
                          <span className="lifeline">{fiftyFifty}</span>
@@ -374,19 +372,18 @@ handleDisableButton = () =>{
                 <span className='float-right' style={{float:'right'}}>{time.minutes}:{time.seconds}<span className="clock"><FaClock /></span></span>
             </div>
 
-            <h3> {currentQuestion.question} </h3>
+            <h3 className='questions'> {currentQuestion.question} </h3>
             
             <div className='options-container'>
-                <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionA}</p>
-                <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionB}</p>
+                <p onClick={this.handleOptionClick} className='option' data-aos="zoom-in">{currentQuestion.optionA}</p>
+                <p onClick={this.handleOptionClick} className='option' data-aos="zoom-in">{currentQuestion.optionB}</p>
             </div>
             <div className='options-container'>
-                <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionC}</p>
-                <p onClick={this.handleOptionClick} className='option'>{currentQuestion.optionD}</p>
+                <p onClick={this.handleOptionClick} className='option' data-aos="zoom-in">{currentQuestion.optionC}</p>
+                <p onClick={this.handleOptionClick} className='option' data-aos="zoom-in">{currentQuestion.optionD}</p>
             </div>
 
             <div className="button-container">
-
                 <button
                     className = {classnames('',{'disable' : this.state.previousButtonDisabled})}
                     id='previous-button' 

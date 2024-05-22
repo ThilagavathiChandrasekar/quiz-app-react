@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import '../styles/QuizIns.css';
 
 //icons
 import { FaGratipay } from "react-icons/fa";
@@ -20,7 +21,7 @@ const QuizInstruction = () =>  (
    
     <div className="instruction container">
         <h1 className='quiz-h1'>How to play the game</h1>
-        <p>Ensure you read this guide from start to finish.</p>
+        <u><b className='heading2'>Ensure you read this guide from start to finish.</b></u>
 
         <ul className='browser-default' id='main-list'>
 
@@ -29,12 +30,12 @@ const QuizInstruction = () =>  (
 
             <li>
             Every question contains 4options <br />
-            <img src={options} className='quiz-ins-image' alt="Quiz App option" />
+            <img src={options} className='quiz-ins-image' alt="Quiz App option"   />
             </li>
 
             <li>
             Select the option which best answers the question by clicking (or selecting) it. <br />
-            <img src={answer} className='quiz-ins-image' alt="Quiz App answer" />
+            <img src={answer} className='quiz-ins-image' alt="Quiz App answer"   />
              </li>
 
              <li>Each game has 2 lifelines namely</li>
@@ -45,7 +46,7 @@ const QuizInstruction = () =>  (
 
             <li>
                 Selecting a 50-50 lifeline by clicking the icon <span className='lifeline-icon'> <FaGratipay /> </span> will remove 2wrong answers, leaving the correct answer and one.
-                <img src={fiftyFifty} className='quiz-ins-image' alt='Quiz app fifty fifty' />
+                <img src={fiftyFifty} className='quiz-ins-image' alt='Quiz app fifty fifty'   />
             </li>
 
             <li>
@@ -53,7 +54,7 @@ const QuizInstruction = () =>  (
                  <span className='lifeline-icon'><FaLightbulb /> </span>
                  will remove one wrong answer leaving wrong tow wrong answers and one correct answer. You can use as many hints as possible on a single question.
                 <br />
-                <img src={hints} className='quiz-ins-image' alt="hints" />
+                <img src={hints} className='quiz-ins-image' alt="hints"   />
             </li>
 
             <li>Feel free to quit (or retire from) the game at any time. In that case your score will be revealed afterwords.</li>
