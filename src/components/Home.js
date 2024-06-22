@@ -15,7 +15,7 @@ const Home = () => (
         <p className="start-content" data-aos="zoom-in"> Start where you are. <br /> Do what you can. <br /> "ALL THE BEST!"</p>
       </div>
       <div className="play-button-container ">
-            <Link to="/play/instruction" className="play-button">
+            <Link to="/github.io/quiz-app-react/play/instruction" className="play-button">
               Play
             </Link>
       </div>

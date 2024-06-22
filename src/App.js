@@ -10,9 +10,9 @@ function App() {
     <div className="App">
         <BrowserRouter>
       <Routes>
-        <Route path='/' element={< Home />} />
-        <Route path='/play/instruction' element={<QuizIns />} />
-        <Route path='/play/quiz' element={<PlayWithRouter />} />
+        <Route path='/github.io/quiz-app-react' element={< Home />} />
+        <Route path='/github.io/quiz-app-react/play/instruction' element={<QuizIns />} />
+        <Route path='/github.io/quiz-app-react/play/quiz' element={<PlayWithRouter />} />
       </Routes>
     </BrowserRouter>
     </div>
